@@ -207,7 +207,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489629647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9299626, y: -1.3441961, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -428,6 +428,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5787023492961902087, guid: eeb5314bcc74ef14d958aa4169ce6154, type: 3}
   firePoint: {fileID: 136412675}
   fireForce: 20
+  centerPoint: {fileID: 1489629651}
 --- !u!212 &1801648299
 SpriteRenderer:
   m_ObjectHideFlags: 0
