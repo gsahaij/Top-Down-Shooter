@@ -248,9 +248,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1489629651}
   - component: {fileID: 1489629650}
-  - component: {fileID: 1489629649}
   - component: {fileID: 1489629648}
   - component: {fileID: 1489629652}
+  - component: {fileID: 1489629653}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -279,22 +279,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1489629649
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489629647}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!212 &1489629650
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -355,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489629647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 0.08, z: 0}
+  m_LocalPosition: {x: -0.461, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -375,9 +359,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 720c259eb8afb6047b6833190ca62056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 1
   rb: {fileID: 1489629648}
   rLauncher: {fileID: 1801648298}
+--- !u!61 &1489629653
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489629647}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008421242, y: 0.0048121065}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.26224634, y: 0.47157475}
+  m_EdgeRadius: 0
 --- !u!1 &1801648296
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801648296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21896267, y: -0.041803956, z: 0}
+  m_LocalPosition: {x: 0.21896267, y: 0.008, z: 0}
   m_LocalScale: {x: 0.2, y: 0.03, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -425,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc318228cb6d8d4f856b6b51ab736f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5787023492961902087, guid: eeb5314bcc74ef14d958aa4169ce6154, type: 3}
+  rocketPrefab: {fileID: 5787023492961902087, guid: eeb5314bcc74ef14d958aa4169ce6154, type: 3}
   firePoint: {fileID: 136412675}
   fireForce: 20
   centerPoint: {fileID: 1489629651}
