@@ -9,6 +9,7 @@ public class Launcher : MonoBehaviour
     public Transform firePoint;                 // Where the rocket should be fired from
     public float fireForce = 20f;               // How hard the rocket should be fired
     public Transform centerPoint;               // Where the launcher is pivoting from
+    public SpriteRenderer sprite;               // Holds a reference to the launcher's sprite
 
     // Private Fields
     private Vector2 differenceInPosition;       // Launcher Position - Pivot Position
@@ -30,6 +31,9 @@ public class Launcher : MonoBehaviour
         Vector3 centerScreenPos = Camera.main.WorldToScreenPoint(centerPoint.position);
         Vector2 dir = Input.mousePosition - centerScreenPos;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        // Less than -90 or Greater than 90 flip in the Y-Axis
+        if (angle < -90 || angle > 90) { sprite.flipY = true; }
+        else { sprite.flipY = false; }
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.position = centerPoint.position + q * differenceInPosition;
         transform.rotation = q;
