@@ -255,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketPrefab: {fileID: 5787023492961902087, guid: eeb5314bcc74ef14d958aa4169ce6154, type: 3}
   firePoint: {fileID: 1231267497}
-  fireForce: 20
+  fireForce: 1
   centerPoint: {fileID: 1489629651}
   sprite: {fileID: 983723310}
 --- !u!212 &983723310
